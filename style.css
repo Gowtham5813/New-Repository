@@ -63,7 +63,7 @@ nav{
 .certificates-wrapper {
     display: flex;
     width: 200%;
-    animation: scroll 25s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 .certificate {
     flex: 0 0 20%;
@@ -71,7 +71,7 @@ nav{
     margin-bottom:25px;
 }
 .certificate img {
-    width: 100%;
+    width: 350px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--back-color);
