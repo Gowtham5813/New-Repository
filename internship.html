@@ -45,6 +45,13 @@
         <strong>Skills Gained:</strong>
       </p>
       <ul id="internship-skills"></ul>
+
+      <p><strong>Certificate:</strong></p>
+
+      <a id="internship-certificate" href="#" target="_blank"
+        >View Certificate</a
+      >
+
       <!-- <p>
         <strong>Project Link:</strong>
         <a id="internship-link" href="#" target="_blank">Code Link</a>
@@ -79,6 +86,8 @@
             "Collaboration & Documentation: Collaborating on detailed documentation helped you improve your communication skills and contributed to better project clarity.",
             "Problem-Solving: By applying advanced AI strategies and improving chatbot performance, you developed stronger problem-solving and analytical skills.",
           ],
+          certificate:
+            "https://drive.google.com/file/d/1MP-dAmsJlXPUkTpogr-bZ3LX86TP8fwb/view",
         },
         tagv: {
           company: "TAGV Embedded Solutions Pvt Ltd.",
@@ -104,6 +113,8 @@
             "Team Collaboration: Working with a team to achieve a functional dashboard helped you develop teamwork, communication, and problem-solving skills in a professional environment.",
             "Database Management: Using SQL to store and retrieve data optimized your skills in querying, structuring, and managing databases efficiently.",
           ],
+          certificate:
+            "https://drive.google.com/file/d/1j_MNU0HROv6vP_ycj0-k3KFfVxb3Hb8q/view?usp=sharing",
           // link: "https://your-project-link.com",
         },
         skilldzire: {
@@ -130,6 +141,8 @@
             "Machine Learning: By working on AI models and refining them, you strengthened your knowledge of machine learning and its application to real-world scenarios.",
             "Problem-Solving and Collaboration: You improved your problem-solving abilities while collaborating with a team to design and implement AI and voice-controlled solutions.",
           ],
+          certificate:
+            "https://drive.google.com/file/d/1h9h2n-AjsCcN89cVsJnmsGwHOzfqHOOk/view?usp=sharing",
           // link: "https://your-project-link.com",
         },
       };
@@ -167,6 +180,16 @@
           li.innerText = skill;
           skillList.appendChild(li);
         });
+
+        const certificateLink = document.getElementById(
+          "internship-certificate"
+        );
+        if (data.certificate) {
+          certificateLink.href = data.certificate;
+          certificateLink.innerText = "View Certificate";
+        } else {
+          certificateLink.style.display = "none"; // Hide if no certificate
+        }
       } else {
         document.querySelector(".container").innerHTML =
           "<h1>Internship Not Found</h1>";
