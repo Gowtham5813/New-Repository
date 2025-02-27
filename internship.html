@@ -42,12 +42,13 @@
       <p><strong>Key Achievements:</strong></p>
       <ul id="internship-achievements"></ul>
       <p>
-        <strong>Skills Gained:</strong> <span id="internship-skills"></span>
+        <strong>Skills Gained:</strong>
       </p>
+      <ul id="internship-skills"></ul>
       <!-- <p>
-        <strong>Project Link:</strong> -->
-      <!-- <a id="internship-link" href="#" target="_blank">Code Link</a> -->
-      <!-- </p>  -->
+        <strong>Project Link:</strong>
+        <a id="internship-link" href="#" target="_blank">Code Link</a>
+      </p> -->
       <a href="index.html" class="back-link">🔙 Back to Internships</a>
     </div>
 
@@ -57,35 +58,79 @@
         skidoo: {
           company: "The Skidoo",
           role: "Software Engineer Intern",
-          duration: "Feb 2024 - Apr 2024",
-          technologies: "React.js, Node.js, MongoDB",
+          duration: "Nov 2024 - Dec 2024",
+          technologies: "React.js, Figma, AI",
           achievements: [
-            "Built a full-stack dashboard",
-            "Implemented authentication system",
+            "Designed and improved website layouts using React.js and Figma for a better user experience",
+            "Enhanced the responsiveness of web pages, making them more mobile-friendly",
+            "Collaborated with the team to create detailed project documentation for better clarity.",
+            "Improved project maintainability by ensuring well-structured documentation",
+            "Customized ChatGPT models for specific business needs.",
+            "Implemented advanced AI techniques to improve chatbot performance.",
+            "Increased relevance and accuracy of AI responses for better user interactions.",
+            "Worked closely with designers and developers to fine-tune UI components.",
+            "Applied best coding practices to make the project scalable and efficient.",
+            "Contributed to a successful AI-powered system, enhancing client satisfaction.",
           ],
-          skills: "Full Stack Development, API Integration",
-          //   link: "https://your-project-link.com"
+          skills: [
+            "UI/UX Design: You developed proficiency in Figma to create visually appealing and responsive web designs that enhance user experience.",
+            "Frontend Development: Working with React.js, you strengthened your skills in building dynamic and responsive web applications.",
+            "AI Customization: You gained experience in fine-tuning and customizing AI models (like ChatGPT) to address specific business use cases, improving their functionality.",
+            "Collaboration & Documentation: Collaborating on detailed documentation helped you improve your communication skills and contributed to better project clarity.",
+            "Problem-Solving: By applying advanced AI strategies and improving chatbot performance, you developed stronger problem-solving and analytical skills.",
+          ],
         },
         tagv: {
           company: "TAGV Embedded Solutions Pvt Ltd.",
           role: "Full Stack Developer Intern",
-          duration: "Jun 2023 - Aug 2023",
-          technologies: "Django, React, PostgreSQL",
+          duration: "May 2023 - Aug 2023",
+          technologies: "JavaScript , Python , Django , SQL , Postman",
           achievements: [
-            "Developed an internal reporting tool",
-            "Optimized database queries",
+            "Developed a dynamic and responsive Weather Data Monitoring Dashboard",
+            "Displayed weather parameters like pressure, humidity, temperature, and rainfall with interactive visualizations",
+            "Integrated bar graphs, pie charts, and doughnut charts for easy data analysis.",
+            "Fetched real-time weather data from the company’s server and processed it efficiently.",
+            "Used JavaScript, SQL, Python, and Django to build a smooth and scalable dashboard.",
+            "Ensured data was presented in a user-friendly and visually appealing manner.",
+            "Tested API endpoints using Postman for seamless data retrieval and accuracy.",
+            "Improved dashboard performance for faster loading and better user experience.",
+            "Worked collaboratively with the team to refine features and enhance usability",
+            "Gained hands-on experience in backend integration and data visualization techniques.",
           ],
-          skills: "Backend Development, Performance Optimization",
-          link: "https://your-project-link.com",
+          skills: [
+            "Full-Stack Development: You worked with JavaScript, Python, SQL, and Django to build a dynamic and responsive weather data dashboard, strengthening your backend and frontend development skills.",
+            "Data Visualization: You used bar graphs, pie charts, and doughnut charts to present weather data, enhancing your ability to represent data in an intuitive and user-friendly way.",
+            "API Integration: By fetching real-time data from the company's server and displaying it in charts, you improved your understanding of API requests, Postman, and backend-to-frontend data flow.",
+            "Team Collaboration: Working with a team to achieve a functional dashboard helped you develop teamwork, communication, and problem-solving skills in a professional environment.",
+            "Database Management: Using SQL to store and retrieve data optimized your skills in querying, structuring, and managing databases efficiently.",
+          ],
+          // link: "https://your-project-link.com",
         },
         skilldzire: {
           company: "SkillDzire",
           role: "Artificial Intelligence Intern",
           duration: "Jun 2022 - Aug 2022",
-          technologies: "Python, TensorFlow, NLP",
-          achievements: ["Worked on AI chatbot", "Trained an NLP model"],
-          skills: "Machine Learning, NLP",
-          link: "https://your-project-link.com",
+          technologies: "Python, Artificial Intelligence, NLP",
+          achievements: [
+            "Utilized Alexa’s voice recognition and AI capabilities to improve user interactions and enhance overall user satisfaction",
+            "Integrated advanced AI features to significantly enhance task completion rates via voice commands",
+            "Incorporated Natural Language Processing to improve the accuracy of communication between users and the system.",
+            "Applied cutting-edge AI algorithms and optimized techniques to boost the efficiency of voice-controlled systems.",
+            "Focused on refining AI processing methods to enhance system performance.",
+            "Leveraged machine learning models to continuously improve the voice recognition system’s responsiveness.",
+            "Collaborated with the team to implement advanced AI and NLP techniques, resulting in better user experiences.",
+            "Developed and fine-tuned algorithms that made interactions with voice-controlled systems more seamless.",
+            "Contributed to the improvement of voice recognition technology, making it more adaptable to user needs.",
+            "Contributed to the improvement of voice recognition technology, making it more adaptable to user needs.",
+          ],
+          skills: [
+            "Voice Recognition and AI: You developed expertise in Alexa's voice recognition and AI capabilities, enhancing user interactions through voice commands.",
+            "Natural Language Processing (NLP): You gained hands-on experience with NLP techniques, improving communication accuracy in voice-controlled systems.",
+            "AI Algorithm Optimization: You honed your skills in optimizing AI algorithms to improve system efficiency and task completion rates.",
+            "Machine Learning: By working on AI models and refining them, you strengthened your knowledge of machine learning and its application to real-world scenarios.",
+            "Problem-Solving and Collaboration: You improved your problem-solving abilities while collaborating with a team to design and implement AI and voice-controlled solutions.",
+          ],
+          // link: "https://your-project-link.com",
         },
       };
 
@@ -103,8 +148,8 @@
           data.duration;
         document.getElementById("internship-tech").innerText =
           data.technologies;
-        document.getElementById("internship-skills").innerText = data.skills;
-        document.getElementById("internship-link").href = data.link;
+        // document.getElementById("internship-skills").innerText = data.skills;
+        // document.getElementById("internship-link").href = data.link;
 
         // Add Achievements
         const achievementsList = document.getElementById(
@@ -114,6 +159,13 @@
           let li = document.createElement("li");
           li.innerText = achievement;
           achievementsList.appendChild(li);
+        });
+
+        const skillList = document.getElementById("internship-skills");
+        data.skills.forEach((skill) => {
+          let li = document.createElement("li");
+          li.innerText = skill;
+          skillList.appendChild(li);
         });
       } else {
         document.querySelector(".container").innerHTML =
