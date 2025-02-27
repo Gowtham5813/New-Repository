@@ -14,6 +14,7 @@
     <div id="header">
       <div class="container">
         <nav>
+          <button id="theme-toggle">🌙</button>
           <!-- <img src="Portfolio-Image/gowtham-new photo3.png" class="logo" /> -->
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
@@ -45,7 +46,7 @@
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About me</h1>
-            <p>
+            <p class="text">
               I am Avala Gowtham, a passionate software engineer and web
               developer with a Bachelor’s degree in Computer Science &
               Engineering. With hands-on experience in JavaScript,
@@ -69,16 +70,16 @@
             <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li>
-                  <span>Programming Skills </span
-                  ><br />C,JavaScript,Java,Python,Node.js,MongoDB,HTML,CSS
+                  <span>Programming Skills </span><br />C, JavaScript, Java,
+                  Python, Node.js, HTML, CSS
                 </li>
                 <li>
-                  <span>Technologies </span><br />React.js,Django,SQL,NLP,LLM
+                  <span>Technologies </span><br />React.js, Django, SQL,
+                  MongoDB, NLP, LLM
                 </li>
                 <li>
-                  <span>Tools</span
-                  ><br />MsOffice,PowerPoint,Git,GitHub,Software Development
-                  lifecycle
+                  <span>Tools</span><br />MsOffice, PowerPoint, Git, GitHub,
+                  Software Development lifecycle
                 </li>
               </ul>
             </div>
@@ -275,6 +276,27 @@
     </script>
 
     <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      // Load theme from localStorage
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        themeToggle.textContent = "☀️"; // Set sun icon for light mode
+      }
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          themeToggle.textContent = "☀️"; // Sun icon for light mode
+          localStorage.setItem("theme", "dark");
+        } else {
+          themeToggle.textContent = "🌙"; // Moon icon for dark mode
+          localStorage.setItem("theme", "light");
+        }
+      });
+
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbwT6Vot6vJxsTNLMXvZNNR3CkpbqOtTa9n8bks9VmOo7nROPyvxOFRfWR8hSdgqrprY3Q/exec";
       const form = document.forms["submit-to-google-sheet"];
