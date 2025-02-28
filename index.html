@@ -246,13 +246,17 @@
             <p><i class="fa-solid fa-envelope"></i>gouthamavala@gmail.com</p>
             <p><i class="fa-solid fa-phone"></i>7396902286</p>
             <div class="social-icons">
-              <a href="https://www.linkedin.com/in/gowtham-avala-2b319a274/"
+              <a
+                href="https://www.linkedin.com/in/gowtham-avala-2b319a274/"
+                target="_blank"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
-              <a href="https://instagram.com"
+              <a
+                href="https://www.instagram.com/gowtham_green358/"
+                target="_blank"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a href="https://github.com/Gowtham5813">
+              <a href="https://github.com/Gowtham5813" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
@@ -319,9 +323,15 @@
       const body = document.body;
 
       // Load theme from localStorage
-      if (localStorage.getItem("theme") === "dark") {
+      if (
+        !localStorage.getItem("theme") ||
+        localStorage.getItem("theme") === "dark"
+      ) {
         body.classList.add("dark-mode");
-        themeToggle.textContent = "☀️"; // Set sun icon for light mode
+        themeToggle.textContent = "☀️";
+        localStorage.setItem("theme", "dark"); // Set sun icon for light mode
+      } else {
+        themeToggle.textContent = "🌙"; // Moon icon for switching to dark mode
       }
 
       themeToggle.addEventListener("click", () => {

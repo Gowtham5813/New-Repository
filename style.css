@@ -431,6 +431,10 @@ nav .fa-regular,nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
+    .certificates-wrapper {
+        animation: scroll 10s linear infinite; /* Even faster */
+    }
+    
 }
 
 #msg{
